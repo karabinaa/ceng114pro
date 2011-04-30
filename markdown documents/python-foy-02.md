@@ -75,7 +75,7 @@ Bu operatörler (+, -, *, /, % gibi) sonuç olarak **sayı** ya da **karakter di
 
 "**and**", "**or**" ve "**xor**" mantıksal operatörleri ise "True" ya da "False" olan ifadelerin arasında bulunarak **bağlaç** görevi görürler. Bu operatörlerden **and** ile **or** yazı ile yazılabildiği gibi, **and** operatörünü "**&**" işareti ile, **or** operatörü de "|" işaretleri ile göstermek de mümkündür. **xor** operatör ise sadece "^" işareti ile kullanılabilir. Bu bağlaçların döndürecekleri sonuç aşağıdaki tablodan yararlanılarak çıkarılabilir:
 
-![foy2-resim1]
+![](../images/foy2-resim1.png)
 
 "**not**" operatörü ise kendisinden sonra gelen ifadenin doğruluk değerini değiştirerek **True** ise **False**, **False** ise **True** yapar:
 
@@ -87,7 +87,7 @@ True
 
 Diğer operatörlerin görevlerini hatırlayalım:
 
-*+*  -> İki sayıyı ya da iki karakter dizisini birleştirir. Bir fonksiyon gibi işlemin sonucunu döndürür.
+"+"  -> İki sayıyı ya da iki karakter dizisini birleştirir. Bir fonksiyon gibi işlemin sonucunu döndürür.
 
 ~~~~{.python}
 >>> 3 + 9.0
@@ -96,14 +96,14 @@ Diğer operatörlerin görevlerini hatırlayalım:
 'python'
 ~~~~
 
-**-**	-> İki sayının farkını alır. Bir fonksiyon gibi işlemin sonucunu döndürür.
+"-"	-> İki sayının farkını alır. Bir fonksiyon gibi işlemin sonucunu döndürür.
 
 ~~~~{.python}
 >>> 8.74 - 19
 -10.26
 ~~~~
 
-***  -> İki sayıyı çarpar ya da bir karakter dizisini belirli bir sayıda tekrarlayarak arka arkaya ekler. Bir fonksiyon gibi işlemin sonucunu döndürür.
+"*"  -> İki sayıyı çarpar ya da bir karakter dizisini belirli bir sayıda tekrarlayarak arka arkaya ekler. Bir fonksiyon gibi işlemin sonucunu döndürür.
 
 ~~~~{.pyhton}
 >>> 13 * 61
@@ -112,7 +112,7 @@ Diğer operatörlerin görevlerini hatırlayalım:
 'ekimekimekimekim'
 ~~~~
 
-*/* -> İki sayıyı böler ve **bölümü** hesaplar.Bölen ve bölünen tamsayı ise kalan ihmal edilir. Bölen ve bölünenden en az biri ondalıklı sayı ise bölme işlemi kalan üzerinden de devam eder ve ondalıklı bölme yapılır. Bir fonksiyon gibi işlemin sonucunu döndürür.
+"/" -> İki sayıyı böler ve **bölümü** hesaplar.Bölen ve bölünen tamsayı ise kalan ihmal edilir. Bölen ve bölünenden en az biri ondalıklı sayı ise bölme işlemi kalan üzerinden de devam eder ve ondalıklı bölme yapılır. Bir fonksiyon gibi işlemin sonucunu döndürür.
 
 ~~~~{.pyhton}
 >>> 7 / 4
@@ -121,7 +121,7 @@ Diğer operatörlerin görevlerini hatırlayalım:
 1.75
 ~~~~
 
-% -> İki sayıyı böler ve **kalan**ı hesaplar (Başka bir deyişe bir sayının diğerine göre **mod**unu hesaplar.) Bir fonksiyon gibi sonucunu döndürür.
+"%" -> İki sayıyı böler ve **kalan**ı hesaplar (Başka bir deyişe bir sayının diğerine göre **mod**unu hesaplar.) Bir fonksiyon gibi sonucunu döndürür.
 
 ~~~~{.python}
 >>> 7 % 4 
@@ -130,7 +130,7 @@ Diğer operatörlerin görevlerini hatırlayalım:
 3.0
 ~~~~
 
-== -> iki ifadenin **eşitliğini** kontrol ederek **True** ya da **False** döndürür.
+"==" -> iki ifadenin **eşitliğini** kontrol ederek **True** ya da **False** döndürür.
 
 ~~~~{.python}
 >>> 8 == 9
@@ -145,7 +145,7 @@ True
 True
 ~~~~
 
-!= -> İki ifadenin **farklılığını** kontrol ederek **True** ya da **False** döndürür.
+"!=" -> İki ifadenin **farklılığını** kontrol ederek **True** ya da **False** döndürür.
 
 ~~~~{.python}
 >>> 8 != 9
@@ -160,4 +160,54 @@ False
 False 
 ~~~~
 
-**<** ~~~>~~~
+"<" -> Soldaki ifadenin sağdakinden **küçüklüğünü** kontrol ederek **True** ya da **False** döndürür.
+
+~~~~{.python}
+>>> 8 < 9
+True
+>>> 4.41 < 4.40
+False
+>>> 'aa' < 'a'
+False
+>>> 'aa' < 'aaa'
+True
+>>> 'ab' < 'aa'
+False
+>>> 'ab' < 'ac'
+True
+~~~~
+
+">" -> Soldaki ifadenin sağdakinden **büyüklüğünü** kontrol ederek **True** ya da **False** döndürür.
+
+"<=" -> Soldaki ifadenin sağdakinden **küçük ya da** sağdakine **eşit olma durumunu** kontrol ederek **True** ya da **False** döndürür.
+
+">=" -> Soldaki ifadenin sağdakinden **büyük ya da** sağdakine **eşit olma durumunu** kontrol ederek **True** ya da **False** döndürür.
+
+### Veri Girişi
+
+Python' da bir değişkene değer atıp, daha sonra bu değişkeni, içerisine atılan değer yerine kullanmayı incelemiştik. Yani " **universite** = "Ondokuz Mayıs Üniversitesi" " atamasını yaptıktan sonra "Ondokuz Mayıs Üniversitesi" değeri yerine "**universite**" değişkenini kullanmamız bizi aynı sonuca götürüyordu.
+
+Bu kısımda ise programın, çalışma esnasında kullanıcıdan bir veri alarak, aldığı bu veriyi işleme tabi tuttuktan sonra kullanıcıya geri dönüş yapmasını inceleyeceğiz.
+
+Python' da klavyeden veri almak için "raw_input()" fonksiyonu kullanılır. Bu fonksiyonda parantezler arasına, kullanıcıdan veri isterken ona hitaben ne söyleyeceğimizi (örneğin "Lütfen isminizi giriniz : "), karakter dizisi olarak gireriz. Bu fonksiyon çalıştırıldığında kullanıcıya bu karakter dizisini sunarak ondan ilgili değerleri girmesini ve ENTER tuşuna basması bekler. Değerler girilip tuşa basıldıktan sonra fonksiyon, girilen bu değeri döndürür (Fonksiyonun sol tarafında "=" işareti, onun da solunda bir değişken varsa fonksiyonun döndürdüğü değer, yani kullanıcının girdiği değer, bu değişkene atılır.).
+
+Aşağıdaki örnekte betik dosyası kullanarak kullanıcıdan isim bilgisinin alınmasını ve kullanıcıya "Merhaba [kullanıcı ismi], hoş geldin." mesajının sunulmasını içeren gösterim yer almaktadır. Betik dosyasının içeriği şu şekildedir:
+
+~~~~{.python}
+isim = raw_input("Lütfen isminizi giriniz : ")
+print "Merhaba", isim, ", hoşgeldin."
+~~~~
+
+Bu betik dosyası çalıştırıldığında, Python Shell ekranında, kullanıcıdan isim bilgisi istenecek
+ve kullanıcı bilgi girişi yapıp "ENTER" tuşuna bastıktan sonra ekrana "Merhaba [kullanıcı ismi], hoşgeldin." mesajı yazdıracaktır. Betik dosyasının çalıştırılması ile ilgili örneği aşağıdaki kutuda bulabiliriz:
+
+~~~~{.python}
+Lütfen isminizi giriniz : Emre 
+Merhaba Emre , hoş geldin.
+~~~~
+
+### Çevre ve Alan Hesapları
+
+Python yorumlayıcısını hesap makinesi gibi kullanabileceğimizi ve değişken tanımlama işlemini daha önceki başlıklarda incelemiştik. Bu bölümde ise, öğrenmiş olduğunuz bu iki temel bilgiyi birleştirerek çevre ve alan hesabı gibi geometri problemlerinde kullanmayı öğreneceğiz.
+
+Python' da toplama, çıkarma, çarpma ve bölme işlemleri sırasıyla "+", "-", "*" ve "/" işaretleri ile yapılır. Bunların yanında üs alma ve kök alma işlemleri de bizler için gerekli olacaktır. Python dilinde bir **a** sayısının **b.** dereceden kuvvetini hesaplamak için (**a** ve **b** sayılarının, aynı isimdeki değişkenlerin için bulunduğunu düşünürsek) "**aa** ** **b**" ifadesini kullanırız. aşağıdaki örnekte, birkaç üslü ve köklü ifadenin hesaplanması gösterilmiştir:
