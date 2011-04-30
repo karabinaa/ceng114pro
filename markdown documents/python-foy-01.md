@@ -157,7 +157,7 @@ Python' da betik dosyasında kod yazarken, kodun belirli yerlerine açıklama, h
 ~~~~{.python}
 print 'Diyez öncesi...'
 
-# Diyez ile yapılan yoru
+# Diyez ile yapılan yorum
 
 print 'Diyez sonrası üç tırnak öncesi...'
 

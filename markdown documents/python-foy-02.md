@@ -210,4 +210,35 @@ Merhaba Emre , hoş geldin.
 
 Python yorumlayıcısını hesap makinesi gibi kullanabileceğimizi ve değişken tanımlama işlemini daha önceki başlıklarda incelemiştik. Bu bölümde ise, öğrenmiş olduğunuz bu iki temel bilgiyi birleştirerek çevre ve alan hesabı gibi geometri problemlerinde kullanmayı öğreneceğiz.
 
-Python' da toplama, çıkarma, çarpma ve bölme işlemleri sırasıyla "+", "-", "*" ve "/" işaretleri ile yapılır. Bunların yanında üs alma ve kök alma işlemleri de bizler için gerekli olacaktır. Python dilinde bir **a** sayısının **b.** dereceden kuvvetini hesaplamak için (**a** ve **b** sayılarının, aynı isimdeki değişkenlerin için bulunduğunu düşünürsek) "**aa** ** **b**" ifadesini kullanırız. aşağıdaki örnekte, birkaç üslü ve köklü ifadenin hesaplanması gösterilmiştir:
+Python' da toplama, çıkarma, çarpma ve bölme işlemleri sırasıyla "+", "-", "*" ve "/" işaretleri ile yapılır. Bunların yanında üs alma ve kök alma işlemleri de bizler için gerekli olacaktır. Python dilinde bir **a** sayısının **b.** dereceden kuvvetini hesaplamak için (**a** ve **b** sayılarının, aynı isimdeki değişkenlerin için bulunduğunu düşünürsek) "__a__* ** __b__" ifadesini kullanırız. aşağıdaki örnekte, birkaç üslü ve köklü ifadenin hesaplanması gösterilmiştir:
+
+![](../images/foy2-resim2.png)
+
+~~~~{.python}
+>>> 7 ** 2
+49
+>>> 3 ** 5
+243
+>>> 25 ** (1 / 2)
+1
+>>> 25 ** (1.0 / 2.0)
+5.0
+>>> 25 ** 0.5
+5.0
+>>> 81 ** (1.0 /4.0)
+3.o
+>>> 81 ** 0.25
+3.0
+>>> 125 ** (1.0 / 3.0)
+4.9999999999999991
+>>> 125 ** 0.3
+4.2566996126039225
+>>> 125 ** 0.333
+4.991959282691119
+>>> round(125 ** (1.0 / 3.0)
+5.0
+~~~~
+
+Örnekte verilen "7' nin 2. kuvveti" ve "3' ün 5. kuvveti" değerlerini bulmak için  bir önceki paragrafta yer alan "**a** * ** **b**" şeklindeki kullanım yeterli olmaktadır. Bir sayının **n.** dereceden kökünü almak ise **(1 / n).** dereceden üssünü almakla aynı olup; bu durum bize "**a** * ** **b**" şeklinde kullanım ile sadece üs değil, kök de alma imkanı vermektedir.
+
+Ancak, kök alırken üsse, yani " ** " işaretlerinin sağ tarafında yazılan sayıya dikkat etmemiz gerekir. Örneğin, **25** sayısının karekökünü almak için "**25** * ** **(1 / 2)**" yazarsak, sonucun **5** olmasını beklememize rağmen **1** olduğunu görürüz. Bunun nedeni, üs olan "**1 / 2**" de yer alna **1** ve **2** sayılarının birer **tamsayı** olması, Python yorumlayıcısının ise **1**' i **2**' ye bölerken **ondalıklı bölme yerine tam sayı bölmesi yaparak** "**1' in içerisinde 2, sıfır kere vardır.**" sonucuna ulaşması ve neticede **25 sayısının 0. kuvvetini** döndürmesidir. Python' un ondalıklı bölme yapmasını sağlamak içinse 'üs' teki sayılardan **en az birisini** ondalıklı olarak girmemiz gerekmektedir. ("**1 / 2.0**" gibi) 
