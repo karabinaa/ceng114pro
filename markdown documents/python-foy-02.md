@@ -241,4 +241,110 @@ Python' da toplama, çıkarma, çarpma ve bölme işlemleri sırasıyla "+", "-"
 
 Örnekte verilen "7' nin 2. kuvveti" ve "3' ün 5. kuvveti" değerlerini bulmak için  bir önceki paragrafta yer alan "**a** * ** **b**" şeklindeki kullanım yeterli olmaktadır. Bir sayının **n.** dereceden kökünü almak ise **(1 / n).** dereceden üssünü almakla aynı olup; bu durum bize "**a** * ** **b**" şeklinde kullanım ile sadece üs değil, kök de alma imkanı vermektedir.
 
-Ancak, kök alırken üsse, yani " ** " işaretlerinin sağ tarafında yazılan sayıya dikkat etmemiz gerekir. Örneğin, **25** sayısının karekökünü almak için "**25** * ** **(1 / 2)**" yazarsak, sonucun **5** olmasını beklememize rağmen **1** olduğunu görürüz. Bunun nedeni, üs olan "**1 / 2**" de yer alna **1** ve **2** sayılarının birer **tamsayı** olması, Python yorumlayıcısının ise **1**' i **2**' ye bölerken **ondalıklı bölme yerine tam sayı bölmesi yaparak** "**1' in içerisinde 2, sıfır kere vardır.**" sonucuna ulaşması ve neticede **25 sayısının 0. kuvvetini** döndürmesidir. Python' un ondalıklı bölme yapmasını sağlamak içinse 'üs' teki sayılardan **en az birisini** ondalıklı olarak girmemiz gerekmektedir. ("**1 / 2.0**" gibi) 
+Ancak, kök alırken üsse, yani " ** " işaretlerinin sağ tarafında yazılan sayıya dikkat etmemiz gerekir. Örneğin, **25** sayısının karekökünü almak için "**25** * ** **(1 / 2)**" yazarsak, sonucun **5** olmasını beklememize rağmen **1** olduğunu görürüz. Bunun nedeni, üs olan "**1 / 2**" de yer alna **1** ve **2** sayılarının birer **tamsayı** olması, Python yorumlayıcısının ise **1**' i **2**' ye bölerken **ondalıklı bölme yerine tam sayı bölmesi yaparak** "**1' in içerisinde 2, sıfır kere vardır.**" sonucuna ulaşması ve neticede **25 sayısının 0. kuvvetini** döndürmesidir. Python' un ondalıklı bölme yapmasını sağlamak içinse 'üs' teki sayılardan **en az birisini** ondalıklı olarak girmemiz gerekmektedir. ("**1 / 2.0**" gibi). Bunu yaptığımızda bölme işleminin sonucunu direkt olarak yazmamız da bizi doğru sonuca ulaştıracaktır (**"25 ** 0.5"** gibi). Benzer durum, **81** sayısının **4.** dereceden kökünü alırken de geçerli olacaktır.
+
+**125** sayısının **3.** dereceden kökünü alma işlemini incelediğimizde, **125**'in üssünde yer alması gerekn **"1.0 / 3.0"** sayısının **0.333333....** şeklinde sonsuza kadar devam ettiğini görürüz. Oysa ki **125** sayısının küp kökü **5**' tir. Örnekte de görüldüğü üzere, 'üs' te "**0.**" dan sonra ne kadar çok **3** koyarsak bölme işleminin sonucunu o kadar daha sağlıklı (gerçeğe yakın) hesaplamış olacağımız için küp kök işleminin sonucu da olması gereken **5** değerine o kadar çok yaklaşacaktır (Ancak ulaşamayacaktır.). Buna bir çözüm olarak, böylesi küsüratlı sayıları en yakın tamsayıya yuvarlamakta kullanılan "**round()**" fonksiyonundan yararlanarak, sonucunu yuvarlamak istediğimiz ifadeyi bu fonksiyonun parantezleri içine yazabiliriz. Örnekte de görüldüğü gibi bu fonksiyon aracılığı ile **125** sayısının küp kökü **5.0** olarak bulunmuştur.
+
+Matematiksel işlemlerde iki farklı türden veriyi tek bir işleme soktuğumuzda, **daha özel* türden veri, **daha genel** bir türe çevirilir. Örneğin bütün dikdörtgenler birer kare olmamasına rağmen, bütün kareler birer dikdörtgendir. Kareler, dikdörtgenlerin özel bir türü olup, kenar uzunlukları birbirine eşittir. Benzer şekilde tamsayılar da ondalıklı sayıların **ondalıklı kısmı "0" olan** birer özel türüdür. Buna göre, bir tamsayı ile bir ondalıklı sayıyı aynı matematiksel işleme soktuğumuzda sonuç bir ondalıklı sayı olacaktır:
+
+~~~~{.pyhton}
+>>> 3 + 7.5
+10.5
+>>> 8 - 4.0
+4.0
+>>> 3 * 1.5
+4.5
+>>> 16.0 / 4
+4.0
+~~~~
+
+Sıradaki örneğimizde, birbirine dik olan **a** ve **b** kenarlarının uzunlukları verilmiş bir ABC üçgeninin çevresinin hesaplanması üzerinde duracağız.
+
+![](../images/foy2-resim3.png)
+
+Problemin çözümünde, bir dik üçgende birbirine dik olan kenarların uzunluklarının kareleri toplamının karekökünün, dik açının karşısındaki kenarın uzunluğuna eşit olduğu bilgisinden faydalanabiliriz. Dik açının karşısındaki kenara "**c**" dersen **c**' nin uzunluğu:
+
+![](../images/foy2-resim4.png)
+
+birim olarak bulunur. Üçgenin çevre uzunluğu ise 
+**Ç = |a| + |b| + |c| = 8 + 15 + 17 = 40** birim olarak bulunur. Python' u etkileşimli biçimde kullanarak bu problemi, aşağıdaki şekilde çözebiliriz :
+
+~~~~{.python}
+>>> a = 8
+>>> b = 15
+>>> c = (a ** 2 + b ** 2) ** 0.5
+>>> cevre = a + b + c
+>>> print "Üçgenin çevre uzunluğu", cevre, "birimdir."
+Üçgenin çevre uzunluğu 40.0 birimdir.
+~~~~
+
+Burada dikkat etmemiz gereken şey, kenar uzunluklarını değişkenlerde tutup bu değişkenler üzerinde işlemler yaparak problem çözmenin, sadece sayılar üzerinde işlem yaparak ("**cevre = 8 + 15 + (8 ** 2 + 15 ** 2) ** 0.5**" gibi) sonuca varmaya kıyasla çok daha anlaşılır ve basit olduğudur.
+
+### Ek Bilgiler
+
+* Python' da bir tamsayı ile bir karakter dizisi toplanamaz:
+
+~~~~{.python}
+>>> d = 2 + 'yedi'
+***Hata Mesajı***
+~~~~
+
+* **print** komutu kullanılarak birden fazla karakter dizisi yazdırılmak istendiğinde bu karakter dizisinin arasına "**,**" konursa bu iki karakter dizisi aynı satıra ayrı ayrı yazılacaktır. Aralarına "+" konursa da aynı satıra ve bitişik yazılacaklardır:
+
+~~~{.python}
+>>> print 'Büyük', 'Taarruz'
+Büyük Taarruz
+>>> print 'Baş' + 'kumandanlık'
+Başkumandanlık
+>>> print 'Gazi', 'Mustafa', 'Kemal', 'ATATÜRK'
+Gazi Mustafa Kemal ATATÜRK
+~~~~
+
+* "*" operatörünün sağına ve soluna birer pozitif tamsayı ve karakter dizisi koymak (Yerleri önemli değildir.), aslında karakter dizisini tamsayı adedince tekrarlamaktır:
+
+~~~~{.pyhton}
+>>> 'usul' * 2
+'usulusul'
+>>> 3 * 'NurAy'
+'NurAyNurAyNurAy'
+~~~~
+
+* "Değişken Tanımlama" bölümünde incelemiş olduğumuz her bir değişken türünü karakter dizisine dönüştürerek temsili bir gösterim elde etmek için, "**repr()**" fonksiyonu kullanılır:
+
+~~~~{.pyhton}
+>>> repr('OMU')
+"'OMU'"
+>>> repr(60)
+'60'
+>>> repr(19.5)
+'19.5'
+>>> k = -9 + 4j
+>>> k_repr = repr(k)
+>>> print k_repr
+(-9 + 4j)
+~~~~
+
+### Doctest Kullanımı
+
+Python' da betik dosyasına bir fonksiyon yazdığımızda ("Fonksiyonlar" konusu ileride detaylı olarak ele alınacaktır.), bu fonksiyonun belirli değerler için doğru çıktılar üretip-üretmediğini
+kontrol etmek için bir **geçerli kılma** işlemine ihtiyaç duyabiliriz. Bu sayede, betik dosyasında yer alan komutların (kodların) F5 tuşuna basılarak yorumlanması sırasında, test edilecek olan fonksiyona çeşitli değerler verilir ve beklenen çıktıları üretip-üretmediği gözlenir. Eğer **bütün** test işlemleri başarı ile sonuçlanmışsa herhangi bir uyarı mesajı verilmez. Aksi durumda, hata ile karşılaşılan test işlemleri için **beklenen** ve **elde edilen** değerler (ki birbirlerinden farklı olacaklardır) belirtilerek uyarı mesajı verilir. Girilen tamsayının karesini döndüren "kare_al" fonksiyonuna ait örnek 'doctest' kullanımı aşağıdadır:
+
+~~~~{.python}
+def kare_al(sayi):
+	"""
+	Bu bir doctest ornegidir.
+	>>> kare_al(2)
+	4
+	>>> kare_al(0)
+	0
+	>>> kare_al(-4)
+	16
+	"""
+	return (sayi * sayi)
+def _test():
+	import doctest
+	doctest.testmod()
+if __name__ == "__main__":
+	_test()
+~~~~
+
