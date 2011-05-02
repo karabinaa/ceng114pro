@@ -420,3 +420,89 @@ Got:
 16
 ~~~~
 
+### Alıştırmalar
+
+### Alıştırma - 1
+
+**Görev**
+Python yorumlayıcısını etkileşimli biçimde kullanarak, şu problemi çözünüz:
+
+Eğer 10 kilometrelik bir yarışı 43 dakika 30 saniyede tamamladıysanız, 1 mil mesafeyi ortalama ne kadar sürede katetmiş olursunuz? (Not: 1 mil, 1.61 kilometreye karşılık gelmektedir.)
+
+**İpucu**
+Python yorumlayıcısını etkileşimli bir biçimde, bir hesap makinesi gibi kullanabilirsiniz. Python’ un matematiksel işlemler için kullandığı sözdizimi, standart matematiksel gösterimle hemen hemen aynıdır. Aşağıda iki farklı işlem ve bunlara ait sonuçlar yer almaktadır:
+
+~~~~{.python}
+>>> (8 + 4 / 2) + (6 - 2 * 2)
+12
+>>> ((8 + 4) / 2) + ((6 - 2) * 2)
+14
+~~~~
+
+**Sonuç**
+Bu problemi çözmek için kullanmış olduğunuz ifadeyi ve açıklamasını, varsa karşılaştığınız problemleri yazınız.
+
+### Alıştırma - 2
+
+**Görev**
+Python yorumlayıcısını etkileşimli biçimde kullanarak aşağıda verilen ifadeler arasındaki farklılıkları bulunuz.
+
+~~~~{.python}
+a = 6
+b = 8.5
+c = "6"
+d = "8.5"
+~~~~
+
+**İpucu**
+"Değişken Tanımlama** bölümünü inceleyiniz.
+
+**Sonuç**
+Gözleminizin sonucunu ve / veya karşılaştığınız problemleri yazınız.
+
+### Alıştırma - 3 
+
+**Görev** 
+Aşağıdaki kutuda yer alan, Python yorumlayıcısı etkileşimli biçimde kullanılarak yazılmış ifadeleri inceleyiniz ve yorumlayınız.
+
+~~~~{.pyhton}
+>>> m = 8
+>>> type(m)
+<type 'int'>
+>>> n = 12.7
+>>> type(n)
+<type 'float'>
+>>> p = m + n
+>>> type(p)
+<type 'float'>
+>>> print m
+8
+>>> print n
+12.7
+>>> print p
+20.7
+~~~~
+
+**İpucu**
+"Değişken Tanımlama" bölümünü inceleyiniz.
+
+**Sonuç**
+Yorumlarınızı yazınız.
+
+### Alıştırma - 4
+
+**Görev**
+"**lab02_ozgecmis.py**" isminde bir betik dosyası oluşturarak içerisine kullanıcıdan isim, soy isim, doğum yeri, doğum yılı ve meslek unvanı  bilgilerini alıp ekrana **birinci satırda** "[doğum yılı] senesinde dünyaya gelen [kullanıcı ismi] [kullanıcı soy ismi],
+[doğum yeri] doğumludur.", **ikinci satırda ise** "[kullanıcı soy ismi], [meslek unvanı] olarak görev yapmaktadır." yazdıracak olan Python kodunu yazınız.
+
+Program çalıştığında kullanıcıya soracağı sorular, kullanıcının vereceği cevaplar ve programın ürettiği ekran çıktısı, aşağıdaki kutuda yer alan örnekteki gibi olmalıdır:
+
+~~~~{.python}
+Lütfen isminizi giriniz : Emre
+Lütfen soy isminizi giriniz : Gürbüz
+Lütfen doğum yerinizi giriniz : Zonguldak
+Lütfen doğum yılınızı giriniz : 1986
+Lütfen meslek unvanınızı giriniz : bilgisayar mühendisi
+1986 senesinde dünyaya gelen Emre Gürbüz , Zonguldak doğumludur.
+Gürbüz , bilgisayar mühendisi olarak görev yapmaktadır.
+~~~~
