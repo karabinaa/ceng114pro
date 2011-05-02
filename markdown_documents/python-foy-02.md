@@ -512,4 +512,13 @@ Gerçekleştiriminizi ve / veya karşılaştığınız problemleri yazınız.
 
 ### Alıştırma - 5
 
-**Görev
+**Görev**
+Aşağıdaki şekilde ABCD bir dikdörtgen, |AB| = |CD|, |AD| = |BC|; ADE ikizkenar dik üçgen, |AD| = |AE|; DFE yayı ise merkezi A noktası olan bir çembere ait olan 90 o lik bir yay parçasıdır. ABCD dikdörtgeninin yatay kenarları 7 birim, dikey kenarları ise 4 birim uzunluğunda olduğuna göre, şekildeki taralı alanların toplamı kaç birim karedir (π = 3.14 alınız.) ?
+
+![](../images/foy2-resim5.png)
+
+Yukarıdaki problemi, Python yorumlayıcısını etkileşimli biçimde kullanarak "Çevre ve Alan Hesapları" başlığı altında verilen örnektekine benzer biçimde çözünüz.
+
+**Sonuç**
+Çözümünüz hakkındaki açıklamaları ve Python kodlarınızı yazınız.
+
