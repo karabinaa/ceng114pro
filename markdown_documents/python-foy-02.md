@@ -82,7 +82,7 @@ Bu operatörler (+, -, *, /, % gibi) sonuç olarak **sayı** ya da **karakter di
 ~~~~{.python}
 >>> 7 == 7
 True
->>> not 7==7
+>>> not 7 == 7
 ~~~~
 
 Diğer operatörlerin görevlerini hatırlayalım:
@@ -506,3 +506,10 @@ Lütfen meslek unvanınızı giriniz : bilgisayar mühendisi
 1986 senesinde dünyaya gelen Emre Gürbüz , Zonguldak doğumludur.
 Gürbüz , bilgisayar mühendisi olarak görev yapmaktadır.
 ~~~~
+
+**Sonuc**
+Gerçekleştiriminizi ve / veya karşılaştığınız problemleri yazınız.
+
+### Alıştırma - 5
+
+**Görev
