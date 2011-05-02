@@ -225,7 +225,7 @@ Python' da toplama, çıkarma, çarpma ve bölme işlemleri sırasıyla "+", "-"
 5.0
 >>> 25 ** 0.5
 5.0
->>> 81 ** (1.0 /4.0)
+>>> 81 ** (1.0 / 4.0)
 3.o
 >>> 81 ** 0.25
 3.0
@@ -521,4 +521,4 @@ Yukarıdaki problemi, Python yorumlayıcısını etkileşimli biçimde kullanara
 
 **Sonuç**
 Çözümünüz hakkındaki açıklamaları ve Python kodlarınızı yazınız.
-
+ 
