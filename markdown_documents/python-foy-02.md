@@ -425,11 +425,13 @@ Got:
 ### Alıştırma - 1
 
 **Görev**
+
 Python yorumlayıcısını etkileşimli biçimde kullanarak, şu problemi çözünüz:
 
 Eğer 10 kilometrelik bir yarışı 43 dakika 30 saniyede tamamladıysanız, 1 mil mesafeyi ortalama ne kadar sürede katetmiş olursunuz? (Not: 1 mil, 1.61 kilometreye karşılık gelmektedir.)
 
 **İpucu**
+
 Python yorumlayıcısını etkileşimli bir biçimde, bir hesap makinesi gibi kullanabilirsiniz. Python’ un matematiksel işlemler için kullandığı sözdizimi, standart matematiksel gösterimle hemen hemen aynıdır. Aşağıda iki farklı işlem ve bunlara ait sonuçlar yer almaktadır:
 
 ~~~~{.python}
@@ -440,11 +442,13 @@ Python yorumlayıcısını etkileşimli bir biçimde, bir hesap makinesi gibi ku
 ~~~~
 
 **Sonuç**
+
 Bu problemi çözmek için kullanmış olduğunuz ifadeyi ve açıklamasını, varsa karşılaştığınız problemleri yazınız.
 
 ### Alıştırma - 2
 
 **Görev**
+
 Python yorumlayıcısını etkileşimli biçimde kullanarak aşağıda verilen ifadeler arasındaki farklılıkları bulunuz.
 
 ~~~~{.python}
@@ -455,14 +459,17 @@ d = "8.5"
 ~~~~
 
 **İpucu**
+
 "Değişken Tanımlama** bölümünü inceleyiniz.
 
 **Sonuç**
+
 Gözleminizin sonucunu ve / veya karşılaştığınız problemleri yazınız.
 
 ### Alıştırma - 3 
 
 **Görev** 
+
 Aşağıdaki kutuda yer alan, Python yorumlayıcısı etkileşimli biçimde kullanılarak yazılmış ifadeleri inceleyiniz ve yorumlayınız.
 
 ~~~~{.pyhton}
@@ -484,14 +491,17 @@ Aşağıdaki kutuda yer alan, Python yorumlayıcısı etkileşimli biçimde kull
 ~~~~
 
 **İpucu**
+
 "Değişken Tanımlama" bölümünü inceleyiniz.
 
 **Sonuç**
+
 Yorumlarınızı yazınız.
 
 ### Alıştırma - 4
 
 **Görev**
+
 "**lab02_ozgecmis.py**" isminde bir betik dosyası oluşturarak içerisine kullanıcıdan isim, soy isim, doğum yeri, doğum yılı ve meslek unvanı  bilgilerini alıp ekrana **birinci satırda** "[doğum yılı] senesinde dünyaya gelen [kullanıcı ismi] [kullanıcı soy ismi],
 [doğum yeri] doğumludur.", **ikinci satırda ise** "[kullanıcı soy ismi], [meslek unvanı] olarak görev yapmaktadır." yazdıracak olan Python kodunu yazınız.
 
@@ -508,11 +518,13 @@ Gürbüz , bilgisayar mühendisi olarak görev yapmaktadır.
 ~~~~
 
 **Sonuc**
+
 Gerçekleştiriminizi ve / veya karşılaştığınız problemleri yazınız.
 
 ### Alıştırma - 5
 
 **Görev**
+
 Aşağıdaki şekilde ABCD bir dikdörtgen, |AB| = |CD|, |AD| = |BC|; ADE ikizkenar dik üçgen, |AD| = |AE|; DFE yayı ise merkezi A noktası olan bir çembere ait olan 90 o lik bir yay parçasıdır. ABCD dikdörtgeninin yatay kenarları 7 birim, dikey kenarları ise 4 birim uzunluğunda olduğuna göre, şekildeki taralı alanların toplamı kaç birim karedir (π = 3.14 alınız.) ?
 
 ![](../images/foy2-resim5.png)
@@ -520,5 +532,6 @@ Aşağıdaki şekilde ABCD bir dikdörtgen, |AB| = |CD|, |AD| = |BC|; ADE ikizke
 Yukarıdaki problemi, Python yorumlayıcısını etkileşimli biçimde kullanarak "Çevre ve Alan Hesapları" başlığı altında verilen örnektekine benzer biçimde çözünüz.
 
 **Sonuç**
+
 Çözümünüz hakkındaki açıklamaları ve Python kodlarınızı yazınız.
  
