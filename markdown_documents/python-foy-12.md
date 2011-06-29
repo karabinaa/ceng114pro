@@ -34,6 +34,7 @@ class Dikdortgen:
             karakter = karakter + '#'
         for j in range(0, self.boy):
             print karakter
+~~~~
 
 Yukarıda, **Dikdortgen** isminde örnek bir sınıf verilmiştir. Bu sınıf içerisinde 5 farklı fonksiyon görülmektedir.
 
@@ -69,6 +70,7 @@ Aşağıda, bu sınıfın kullanımına dair bir örnek yer almaktadır:
 ##########
 ##########
 >>>
+~~~~
 
 Yukarıdaki örnek kullanımda, ilk başta **Dikdortgen** sınıfının bir nesnesi yaratılarak **dd1** referansı ile gösterilmiştir. Nesnenin yaratılması esnasında çağrılan **__init__** yapıcı metoduna, **arg_en** ve **arg_boy** argümanlarının yerine sırasıyla **5** ve **2** verilmiştir. İlgili nesnenin **en** ve **boy** alt alanlarına erişmek için "**dd1.en**" ve "**dd1.boy**" yazılması gerekmektedir. Nesne üzerinden sırasıyla **cevre**, **alan** ve **ciz** fonksiyonlarının çağrılmasından sonra **buyut** fonksiyonu çağrılmıştır. **buyut** fonksiyonuna **katsayi** argümanı yerine **2** verilmiştir. Bu sayede, **dd1** referansı ile gösterilen nesnenin **en** ve **boy** alt alanlarının sahip olduğu değerler 2 katına çıkarılmıştır. En son adımda çağrılan **ciz** fonksiyonu da, bir önceki çağrılışında ürettiği ekran çıktısından daha farklı bir değer üretmiştir.
 
@@ -77,6 +79,7 @@ Yukarıdaki örnek kullanımda, ilk başta **Dikdortgen** sınıfının bir nesn
 ### Alıştırma - 1
 
 **Görev**
+
 "**Kompleks**" isminde, kompleks (karmaşık) sayıları temsil etmeye yönelik bir sınıf oluşturunuz. Sınıfınızın nesnelerinde alt alan olarak "**gercel**" ve "**sanal**" değişkenleri bulunmalıdır. Bu alt alanların ilk değerleri, nesne yaratılması esnasında yapıcı metot yolu ile belirlenebilmelidir. Ayrıca, sınıfınızda "**Mutlak**" ve "**Yazdir**" isminde iki fonksiyon bulunmalıdır. **Mutlak** fonksiyonu, **gercel** ve **sanal** değişkenlerinde tutulan değerlerin karelerini toplayarak sonucun karekökünü döndürmelidir. **Yazdir** fonksiyonu ise, sınıf nesnesi ile temsil edilen kompleks sayıyı "[gercel] + [sanal] i" formatında ekrana yazdırmalıdır. Örnek kullanım:
 
 ~~~~{.python]
@@ -90,6 +93,7 @@ Yukarıdaki örnek kullanımda, ilk başta **Dikdortgen** sınıfının bir nesn
 >>> sayi1.Yazdir()
 6 + 8 i
 >>>
+~~~~
 
 **Sonuç**
 Gerçekleştiriminizi ve / veya karşılaştığınız problemleri raporunuza yazınız.
@@ -108,6 +112,7 @@ Gerçekleştiriminizi ve / veya karşılaştığınız problemleri raporunuza ya
 'ilg'
 >>> sozcuk.Tekrarla(3)
 'bilgibilgibilgi'
+~~~~
 
 **Sonuç**
 Gerçekleştiriminizi ve / veya karşılaştığınız problemleri raporunuza yazınız.
@@ -136,6 +141,7 @@ Alıştırma 2' de tasarlamış olduğunuz **Karakter** sınıfına, 3 fonksiyon
 >>> sozcuk.kdizi
 'isayisay'
 >>>
+~~~~
 
 **Sonuç**
 Gerçekleştiriminizi ve / veya karşılaştığınız problemleri raporunuza yazınız.

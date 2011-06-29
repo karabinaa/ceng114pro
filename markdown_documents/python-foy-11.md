@@ -28,6 +28,7 @@ Bir sözlüğün tanımlanmasını ve kullanılmasını gösteren örnek aşağ�
 <type 'dict'>
 >>> len(tur_ing)
 4
+~~~~
 
 Sözlüğü tek bir satırda tanımlamak da mümkündür:
 
@@ -36,6 +37,7 @@ Sözlüğü tek bir satırda tanımlamak da mümkündür:
 >>> tur_ing = {'bir': 'one', 'iki': 'two', 'uc': 'three', 'bes': 'five'}
 >>> tur_ing['uc']
 'three'
+~~~~
 
 Sözlükte yer alan indislerin **isimlerini (indisler içerisine atanan değerleri değil)** kontrol etmek için **in** komutu kullanılabilir. Aranan indeks isminin sözlükte bulunması durumunda **True**, diğer durumda ise **False** döndürür:
 
@@ -48,6 +50,7 @@ True
 False
 >>> 'ik' in tur_ing
 False
+~~~~
 
 Eğer değerlerin **bulunup bulunmadığını** kontrol etmek istiyorsak, **“values”** isimli fonksiyondan şu şekilde yararlanabiliriz:
 
@@ -61,6 +64,7 @@ True
 False
 >>> 'tw' in degerler
 False
+~~~~
 
 Sözlüklerde indeks değerlerleri tamsayılardan da oluşabilir:
 
@@ -73,6 +77,7 @@ Sözlüklerde indeks değerlerleri tamsayılardan da oluşabilir:
 ***Hata Mesajı***
 >>> kare[4]
 16
+~~~~
 
 ### Tuple Veri Türü
 
@@ -99,6 +104,7 @@ y
 >>> u = ('f',) + p[1:]
 >>> print u
 ('f', 'y', 't', 'h', 'o', 'n')
+~~~~
 
 Yukarıdaki kutuya bakarak, **tuple veri türünün atamayı** desteklemediğini görebiliriz. İki değişkenin değerlerini **değiş - tokuş** yapmak için tuple yapısı büyük kolaylık sağlar:
 
@@ -110,6 +116,7 @@ Yukarıdaki kutuya bakarak, **tuple veri türünün atamayı** desteklemediğini
 7
 >>> b
 3
+~~~~
 
 “**split**” fonksiyonunu kullanarak, örneğin, bir elektronik posta adresini “@” işaretinden öncesi ve sonrası olmak üzere ikiye ayırma işlemini rahatlıkla yapabiliriz:
 
@@ -120,6 +127,7 @@ Yukarıdaki kutuya bakarak, **tuple veri türünün atamayı** desteklemediğini
 python-help
 >>> print alan_adi
 python.org
+~~~~
 
 **NOT: split** fonksiyonu değer olarak liste döndürmektedir. Buradaki atama biçimi, tuple ataması mantığına uyduğu için bu örnek verilmiştir.
 
@@ -134,6 +142,7 @@ Bazı fonksiyonların geri döndürdüğü değerler **tuple** türünden olabil
 3
 >>> print kaLan
 1
+~~~~
 
 Peki, bu şekilde değer döndüren fonksiyonların tanımlanması nasıl olmalı? Aşağıdaki betik dosyasında yer alan ve verilen bir tamsayının karesini ve karekökünü döndüren fonksiyonu inceleyelim:
 
@@ -143,6 +152,7 @@ def kare_ve_karekok(tamsayi):
         return tamsayi ** 2, tamsayi ** 0.5
     else:
         print 'Lutfen pozitif bir tamsayi giriniz.'
+~~~~
 
 F5 ile Python Shell ekranına geldiğimizde:
 
@@ -154,18 +164,21 @@ F5 ile Python Shell ekranına geldiğimizde:
 625
 >>> print karekok
 5.0
+~~~~
 
 Fonksiyonların değişken sayıda argüman almasını sağlamak için “*” işareti kullanılır.
 
 ~~~~{.python}
 def hepsini_yazdir(* argumanlar):
     print argumanlar
+~~~~
 
 Bu betik dosyasını çalıştırırsak:
 
 ~~~~{.python}
 >>> hepsini_yazdir(5, 'klm', 7.0, "pqr")
 (5, 'klm', 7.0, 'pqr')
+~~~~
 
 Yukarıdaki fonksiyona daha fazla sayıda argüman verilse de hepsini ‘tuple’ şeklinde ekrana yazdıracaktır.
 
@@ -177,6 +190,8 @@ Benzer biçimde, birden fazla sayıda argüman alan bir fonksiyona, içerisinde 
 ***Hata Mesajı (divmod, tuple’ı tek argüman gibi görüyor)***
 >>> divmod(*t)
 (2, 1)
+~~~~
+
 tuple**’ lar, büyüklük-küçüklük, eşitlik yönünden karşılaştırılabilirler. İki ‘tuple’ karşılaştırılırken ilk önce birinci elemanlarına bakılır. Birinci elemanı diğerinden büyük olan ‘tuple’, diğerinden daha büyüktür (Geri kalan elemanlara bakılmaz.). Eşitlik halinde ise 2. elemana, 3. elemana... bakılır:
 
 ~~~~{.python}
@@ -184,6 +199,7 @@ tuple**’ lar, büyüklük-küçüklük, eşitlik yönünden karşılaştırıl
 True
 >>> (1, 2, 3) < (1, 1, 77)
 False
+~~~~
 
 Yazdığımız programlarda; **karakter dizisi, liste, tuple** gibi veri türlerinden birini bir diğerine dönüştürme ya da tamsayı, ondalıklı sayı gibi türlerdeki verileri bu yapılardan herhangi birinde saklama ihtiyacı duyabiliriz. Aşağıdaki fonksiyonu inceleyelim:
 
@@ -199,6 +215,7 @@ def sarmala(kaynak, yapi):
         return [kaynak]
     # yapi nin turu ikisi de degilse degeri tuple olarak dondur
     return (kaynak,)
+~~~~
 
 Burada “kaynak” isimli argümanın taşıdığı değer, “yapi” argümanının ait olduğu türe dönüştürülmektedir. Aşağıdaki örnek kullanımları inceleyelim:
 
@@ -233,6 +250,7 @@ Burada “kaynak” isimli argümanın taşıdığı değer, “yapi” argüman
 ([2, 3, 4, 5],)
 >>> sarmala([2, 3, 4, 5], "")
 '[2, 3, 4, 5]'
+~~~~
 
 Görüldüğü gibi, **sarmala** fonksiyonunun 2. argümanı olan **yapi**’ ya karakter dizisi türünden herhangi bir değer (örnekteki **""**) verilirse, 1. argüman olan **kaynak** ile taşınan değer karakter dizisine dönüştürülmektedir. Eğer **yapi**’ ya liste türünden herhangi bir değer (örnekteki boş liste) verilirse 1. argüman olan **kaynak** ile taşınan değer **liste** içerisine atılarak elde edilen bu yeni liste döndürülmektedir. Eğer **yapi**’ ya bunların haricinde başka türden herhangi bir değer verilirse, 1. argüman olan **kaynak** ile taşınan değer **tuple** içerisine atılarak elde edilen bu yeni tuple döndürülmektedir.
 
@@ -255,6 +273,7 @@ Antalya
 Manisa
 >>> ters_arama(sehirler, 'Manisa')
 İndeks bulunamadı.
+~~~~
 
 **Sonuç**
 
@@ -263,6 +282,7 @@ Gerçekleştiriminizi ve / veya karşılaştığınız problemleri raporunuza ya
 ### Alıştırma – 2
 
 **Görev**
+
 “**0  1  1  2  3  5  8  13  21  34  55  89  144  233  377  610  ...**” şeklinde devam eden ve her elemanın, kendisinden önceki iki elemanın toplamından oluştuğu kurallı diziye “**Fibonacci dizisi**” denir (Bu dizinin sıfırıncı elemanını **0**, yedinci elemanını **13**, onuncu elemanını **55** olarak düşünelim.). “**fibonacci**” adında bir fonksiyonumuz olduğunu ve argüman olarak negatif olmayan bir tamsayı alıp, sonuç olarak Fibonacci dizisinin o tamsayıya karşılık gelen indeksindeki elemanı döndürdüğünü düşünürsek, “**fibonacci(11)**” bize **89** değerini verecektir. **fibonacci** fonksiyonunun sonucu hesaplamak için yapacağı işlemler, argüman olarak aldığı tamsayı büyüdükçe artacaktır. **Bunun için, performans açısından belli bir değere kadarki tamsayıların Fibonacci karşılıklarının program içerisinde tutulmasında yarar vardır (küçük değerlerin daha sık kullanıldığını düşünürsek).**
 
 **10 ve 10’ dan küçük tamsayılar (argüman olarak fonksiyona verilen) için toplama ve benzeri hesaplama işlemi yapmadan direkt sonuç döndüren, 10’ dan büyük tamsayılar için hesaplama yaparak sonuç döndüren** bir Fibonacci fonksiyonu oluşturunuz. Fonksiyonunuza “**hizli_fibonacci**” ismini vererek “**lab10_hizli_fibonacci.py**” isimli betik dosyasına kaydediniz. Fonksiyonun çalıştırılmasına ait örnek aşağıdadır (**doctest olarak ekleyiniz.**):
@@ -280,6 +300,7 @@ Gerçekleştiriminizi ve / veya karşılaştığınız problemleri raporunuza ya
 Lutfen pozitif bir tamsayi giriniz.
 >>> hizli_fibonacci(12.7)
 Lutfen pozitif bir tamsayi giriniz.
+~~~~
 
 **İpucu**
 “Sözlük” başlığını inceleyiniz.
@@ -290,6 +311,7 @@ Gerçekleştiriminizi ve / veya karşılaştığınız problemleri raporunuza ya
 ### Alıştırma – 3
 
 **Görev**
+
 Sınırsız sayıda sayının tek bir fonksiyon çağrısı ile toplanabilmesi için, sınırsız sayıda argüman kabul ederek aldığı sayıları toplayan ve ekrana toplamı yazdıran bir fonksiyon hazırlayınız. Fonksiyonunuza “**sinirsiz_toplam**” ismini vererek “**lab10_sinirsiz_toplam.py**” isimli betik dosyasına kaydediniz. Fonksiyonun çalıştırılmasına ait örnek aşağıdadır:
 
 **NOT:** Fonksiyona, sadece tamsayı ve ondalıklı sayı girileceği garanti edilmiştir. Ayrıca hata kontrolü yapmanız **gerekmemektedir.**
@@ -301,6 +323,7 @@ Sınırsız sayıda sayının tek bir fonksiyon çağrısı ile toplanabilmesi i
 5.0
 **İpucu**
 “Tuple Veri Türü” bölümünü inceleyiniz.
+~~~~
 
 **Sonuç**
 Gerçekleştiriminizi ve / veya karşılaştığınız problemleri raporunuza yazınız.
